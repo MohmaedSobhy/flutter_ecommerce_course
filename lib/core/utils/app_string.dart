@@ -10,4 +10,5 @@ abstract class AppString {
   static const String haveAccount = "Already Have an account?";
   static const String signUpWithGoogle = "Sign Up With Google";
   static const String signUp = "Sign Up";
+  static const String name = "Name";
 }

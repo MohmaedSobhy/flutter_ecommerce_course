@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/Feature/auth/presentation/views/sign_up_card_view.dart';
 import 'package:ecommerce_app/Feature/auth/presentation/widget/sliver_app_title.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,9 @@ class SignUpScreenViewBody extends StatelessWidget {
         SliverSizedBoxHeight(height: 24),
         SliverAppTitle(),
         SliverSizedBoxHeight(height: 24),
+        SliverToBoxAdapter(
+          child: SignUpCardView(),
+        ),
       ],
     );
   }

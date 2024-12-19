@@ -1,6 +1,5 @@
-import 'package:ecommerce_app/Feature/auth/presentation/screens/sign_up_screen.dart';
-import 'package:ecommerce_app/Feature/auth/presentation/views/forget_button_view.dart';
-import 'package:ecommerce_app/Feature/auth/presentation/views/login_card_form_fields.dart';
+import 'package:ecommerce_app/Feature/auth/presentation/screens/login_screen.dart';
+import 'package:ecommerce_app/Feature/auth/presentation/views/sign_up_form_field.dart';
 import 'package:ecommerce_app/Feature/auth/presentation/widget/custome_button.dart';
 import 'package:ecommerce_app/Feature/auth/presentation/widget/custome_card_widget.dart';
 import 'package:ecommerce_app/Feature/auth/presentation/widget/custome_row_text.dart';
@@ -8,8 +7,8 @@ import 'package:ecommerce_app/Feature/auth/presentation/widget/google_icon_widge
 import 'package:ecommerce_app/core/utils/app_string.dart';
 import 'package:flutter/material.dart';
 
-class LoginCardView extends StatelessWidget {
-  const LoginCardView({super.key});
+class SignUpCardView extends StatelessWidget {
+  const SignUpCardView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,29 +17,22 @@ class LoginCardView extends StatelessWidget {
         padding: const EdgeInsetsDirectional.all(16.0),
         child: Column(
           children: [
-            const LoginCardFormFields(),
-            const ForgetButtonView(),
-            const SizedBox(height: 20),
-            CustomeButton(
-              title: AppString.login,
-              onTap: () {},
-            ),
+            const SignUpFormField(),
+            CustomeButton(title: AppString.signUp, onTap: () {}),
             const SizedBox(height: 20),
             CustomeButton(
               title: AppString.signUpWithGoogle,
               onTap: () {},
               icon: const GoogleIconWidget(),
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             CustomeRowText(
-              message: AppString.dontHaveAccount,
-              title: AppString.signUp,
+              message: AppString.haveAccount,
+              title: AppString.login,
               onTap: () {
                 Navigator.of(context).pushAndRemoveUntil(
                     MaterialPageRoute(builder: (context) {
-                  return const SignUpScreen();
+                  return const LoginScreen();
                 }), (route) => false);
               },
             )
