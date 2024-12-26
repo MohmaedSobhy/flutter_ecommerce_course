@@ -38,6 +38,7 @@ class _MainScreenState extends State<MainScreen> {
       ),
       bottomNavigationBar: CustomeButtonNavigation(
         onButtonNavigationTap: onButtonNavigationTap,
+        currentScreen: currentScreen,
       ),
     );
   }

@@ -4,9 +4,12 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 
 class CustomeButtonNavigation extends StatelessWidget {
   final Function(int) onButtonNavigationTap;
+  final int currentScreen;
 
   const CustomeButtonNavigation(
-      {super.key, required this.onButtonNavigationTap});
+      {super.key,
+      required this.onButtonNavigationTap,
+      required this.currentScreen});
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +24,7 @@ class CustomeButtonNavigation extends StatelessWidget {
         ),
         child: GNav(
           onTabChange: onButtonNavigationTap,
+          selectedIndex: currentScreen,
           rippleColor: AppColors.kPrimaryColor,
           hoverColor: AppColors.kPrimaryColor,
           duration: const Duration(milliseconds: 400),
