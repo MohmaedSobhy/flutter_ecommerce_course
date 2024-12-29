@@ -1,6 +1,6 @@
 import 'package:ecommerce_app/Feature/home/presentation/views/category_list_view.dart';
-import 'package:ecommerce_app/Feature/home/presentation/views/productes_list_items.dart';
-import 'package:ecommerce_app/Feature/home/presentation/widgets/custome_search_field.dart';
+import 'package:ecommerce_app/core/widgets/productes_list_items.dart';
+import 'package:ecommerce_app/core/widgets/custome_search_field.dart';
 import 'package:ecommerce_app/core/widgets/sliver_sized_box_height.dart';
 import 'package:flutter/material.dart';
 
@@ -49,7 +49,9 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          ProductesListItems(),
+          ProductesListItems(
+            productModelList: [],
+          ),
         ],
       ),
     );

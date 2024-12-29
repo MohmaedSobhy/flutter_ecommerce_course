@@ -12,4 +12,5 @@ abstract class AppString {
   static const String signUp = "Sign Up";
   static const String name = "Name";
   static const String searchInMarket = "Search in Market";
+  static const String yourFavouritProducts = "Your Favorite Products";
 }
