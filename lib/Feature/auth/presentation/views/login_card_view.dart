@@ -6,6 +6,7 @@ import 'package:ecommerce_app/Feature/auth/presentation/widget/custome_card_widg
 import 'package:ecommerce_app/Feature/auth/presentation/widget/custome_row_text.dart';
 import 'package:ecommerce_app/Feature/auth/presentation/widget/google_icon_widget.dart';
 import 'package:ecommerce_app/Feature/home/presentation/screens/main_screen.dart';
+import 'package:ecommerce_app/core/routes/app_route.dart';
 import 'package:ecommerce_app/core/utils/app_string.dart';
 import 'package:flutter/material.dart';
 
@@ -30,10 +31,8 @@ class LoginCardView extends StatelessWidget {
             CustomeButton(
               title: AppString.signUpWithGoogle,
               onTap: () {
-                Navigator.of(context).pushAndRemoveUntil(
-                    MaterialPageRoute(builder: (context) {
-                  return const MainScreen();
-                }), (route) => false);
+                Navigator.of(context)
+                    .pushNamedAndRemoveUntil(AppRoute.main, (route) => false);
               },
               icon: const GoogleIconWidget(),
             ),
