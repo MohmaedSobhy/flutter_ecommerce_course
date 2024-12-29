@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/core/utils/app_string.dart';
 import 'package:ecommerce_app/core/widgets/productes_list_items.dart';
 import 'package:ecommerce_app/core/widgets/sliver_sized_box_height.dart';
+import 'package:ecommerce_app/core/widgets/sliver_text_center.dart';
 import 'package:flutter/material.dart';
 
 class FavouriteScreen extends StatelessWidget {
@@ -15,17 +16,7 @@ class FavouriteScreen extends StatelessWidget {
           SliverSizedBoxHeight(
             height: 20,
           ),
-          SliverToBoxAdapter(
-            child: Center(
-              child: Text(
-                AppString.yourFavouritProducts,
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
+          SliverTextCenter(title: AppString.yourFavouritProducts),
           SliverSizedBoxHeight(
             height: 15,
           ),
