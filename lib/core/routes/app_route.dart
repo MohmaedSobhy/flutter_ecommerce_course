@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:ecommerce_app/Feature/auth/presentation/screens/forget_screen.dart';
 import 'package:ecommerce_app/Feature/auth/presentation/screens/login_screen.dart';
 import 'package:ecommerce_app/Feature/auth/presentation/screens/sign_up_screen.dart';
