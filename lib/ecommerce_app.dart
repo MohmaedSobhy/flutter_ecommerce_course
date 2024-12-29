@@ -1,4 +1,4 @@
-import 'package:ecommerce_app/Feature/auth/presentation/screens/login_screen.dart';
+import 'package:ecommerce_app/core/routes/app_route.dart';
 import 'package:ecommerce_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +11,8 @@ class EcommerceApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.appTheme,
-      home: const LoginScreen(),
+      initialRoute: AppRoute.login,
+      onGenerateRoute: AppRoute.onGenerateRoute,
     );
   }
 }
